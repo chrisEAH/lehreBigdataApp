@@ -11,7 +11,7 @@ config={
 	"host":"10.81.41.71",
 	"port":"4444",
     "db":"bigChart",
-    "collection":"IndexIdTemp"
+    "collection":"IndexId"
 }
 
 MongoClient.connect("mongodb://"+config.host+":"+config.port, { useNewUrlParser: true}, function(err, db){  
