@@ -20,11 +20,6 @@ MongoClient.connect("mongodb://"+config.host+":"+config.port, { useNewUrlParser:
         var dbObject=db.db(config.db);
         var start=new Date();
         dbObject.collection(config.collection).find({}).sort({temp:-1}).limit(1).toArray(function(err, res){
-            if(err)
-            {
-                console.log(err);
-            }
-            
             var dauer=new Date()-start;
             console.log("Collection: "+config.collection);
             console.log(res);
